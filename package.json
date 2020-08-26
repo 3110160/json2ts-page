@@ -1,0 +1,27 @@
+{
+  "name": "json2ts",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "json2ts": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "port=3030 supervisor app.js",
+    "bulid": "webpack static/index.js -o static/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xzc",
+  "license": "ISC",
+  "dependencies": {
+    "json-to-ts": "^1.7.0",
+    "koa": "^2.13.0",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "commander": "^6.0.0",
+    "shelljs": "^0.8.4",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

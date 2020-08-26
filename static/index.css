@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0465b9;
+  width: 100%;
+}
+.container{
+  padding:10px;
+}
+.title {
+  background-color: #292a37;
+  color: #eef78a;
+  padding-left: 10px;
+}
+.form label,
+.tips {
+  color: white;
+  line-height: 40px;
+}
+.form .box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.form .box > div {
+  flex: 1;
+}
+.submit {
+  width: 120px;
+  line-height: 40px;
+  background-color: #9a2e6c;
+  text-align: center;
+  color: #d2e035;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.submitBox{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.submit:active{
+  opacity: .8;
+}
+.form .CodeMirror {
+  border: 1px solid black;
+  height: 120px;
+  font-size: 13px;
+  width: 600px;
+}
+.form input {
+  width: 300px;
+}
+.codeBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 10px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}

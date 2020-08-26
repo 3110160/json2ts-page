@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json2ts</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./lib/codemirror.css" />
+    <link rel="stylesheet" href="./theme/dracula.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="/lib/codemirror.js"></script>
+    <script src="./mode/javascript/javascript.js"></script>
+    <script src="./addon/selection/active-line.js"></script>
+    <script src="./addon/edit/matchbrackets.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./bundle.js"></script>
+    <!-- <script src="./index.js"></script> -->
+  </head>
+  <body>
+    <h2 class="title">JSON-2-TS</h2>
+    <article class="container">
+      <div class="form">
+        <label for="domain">域名：</label>
+        <input name="domain" value="http://118.178.122.12:80" type="text" placeholder="域名：" />
+        <label for="api">接口地址：</label>
+        <input name="api" value="/wechat/oa/occupation/list" type="text" placeholder="接口地址：" />
+        <label for="methods">请求类型：</label>
+        <select value='get' name="methods" id="methods">
+          <option value="get">get</option>
+          <option value="post">post</option>
+          <option value="delete">delete</option>
+          <option value="head">head</option>
+          <option value="options">options</option>
+          <option value="put">put</option>
+          <option value="patch">patch</option>
+        </select>
+        <div class="box">
+          <div>
+            <p class="tips">Header配置(json格式) ：</p>
+        <textarea name="Header" id="code0">
+  {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  }
+        </textarea>
+          </div>
+        <div>
+          <p class="tips">接口入参(json格式)：</p>
+        <textarea name="params" id="code1">
+  {
+    "pageSize":10,
+    "pageNum":1
+  }
+        </textarea>
+        </div>
+        </div>
+      </div>
+      <div class="submitBox">
+        <div id="submit" class="submit">
+          <!-- loading -->
+          <span id="loading" class="lds-hourglass"></span>
+          <p>发送请求</p>
+        </div>
+      </div>
+      <p class="tips">返回的TS</p>
+      <textarea id="code2"></textarea>
+    </article>
+  </body>
+</html>
