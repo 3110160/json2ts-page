@@ -1,7 +1,7 @@
 {
-  "name": "json2ts",
-  "version": "1.0.0",
-  "description": "",
+  "name": "json2ts-page",
+  "version": "1.0.5",
+  "description": "json2ts-page",
   "bin": {
     "json2ts": "./bin/index.js"
   },
@@ -13,15 +13,17 @@
   "author": "xzc",
   "license": "ISC",
   "dependencies": {
-    "json-to-ts": "^1.7.0",
+    "commander": "^6.0.0",
+    "shelljs": "^0.8.4",
     "koa": "^2.13.0",
     "koa-router": "^9.4.0",
     "koa-static": "^5.0.0"
   },
   "devDependencies": {
-    "commander": "^6.0.0",
-    "shelljs": "^0.8.4",
+    "json-to-ts": "^1.7.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
-  }
+  },
+  "keywords": ["json2ts"],
+  "homepage": "https://github.com/3110160/json2ts-page"
 }
